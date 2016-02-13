@@ -12,12 +12,12 @@
 			var str = "";
 			var i = 0;
 			var timerId = setInterval(function() {
-				str += "Hello, Slava!"[i];
+				str += "Hello, Slava!"[i++];
 				document.body.innerText = str;
 
-				if(str.length === "Hello, Slava!".length) clearInterval(timerId);
-
-				i++;
+				if(str.length === "Hello, Slava!".length){
+					clearInterval(timerId);
+				}
 			}, 200);
 		</script>
 	</body>
